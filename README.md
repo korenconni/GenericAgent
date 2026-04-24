@@ -31,6 +31,7 @@ Every time GenericAgent solves a new task, it automatically crystallizes the exe
 - **Token Efficient**: <30K context window — a fraction of the 200K–1M other agents consume. Layered memory ensures the right knowledge is always in scope. Less noise, fewer hallucinations, higher success rate — at a fraction of the cost.
 
 
-## 🧬
+## 🧬 My Setup Notes
 
-> **⚙️ My Setup Notes** — Running this with `claude-3-5-sonnet-20241022` as the default model. I've found setting the agent loop retry limit to 5 (instead of the default 3) gives noticeably better results on multi-step browser tasks. See `notes/claude-config.md` for my full config.
+> Tested with `claude-3-5-sonnet-20241022` as the backend. Works well out of the box — the main thing to watch is the skill deduplication logic when similar tasks are run back-to-back; occasionally two near-identical skills get saved. May look into adding a similarity threshold check.
+
